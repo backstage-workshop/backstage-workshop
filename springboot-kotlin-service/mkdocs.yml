@@ -1,0 +1,5 @@
+site_name: springboot-kotlin-service-docs
+nav:
+  - Home: index.md
+plugins:
+  - techdocs-core
