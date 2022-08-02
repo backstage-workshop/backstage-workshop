@@ -1,0 +1,10 @@
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  name: bruce.wayne
+  profile:
+    displayName: Bruce Wayne
+    email: iambatman@thoughtworks.com
+    picture: 
+spec:
+  memberOf: [thoughtworks, awesome-project]

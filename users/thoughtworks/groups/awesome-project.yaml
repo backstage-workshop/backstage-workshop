@@ -1,0 +1,8 @@
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: awesome-project
+  description: Awesome Project Team
+spec:
+  type: team
+  children: []

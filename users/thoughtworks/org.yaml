@@ -1,0 +1,10 @@
+apiVersion: backstage.io/v1alpha1
+kind: Location
+metadata:
+  name: tw-org
+  description: A collection of all Backstage user and group entities
+spec:
+  targets:
+    - ./groups/awesome-project.yaml
+    - ./groups/tw.yaml
+    - ./users/users.yaml

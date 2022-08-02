@@ -1,0 +1,7 @@
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: thoughtworks
+spec:
+  type: team
+  children: [awesome-project]
