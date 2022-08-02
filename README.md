@@ -43,6 +43,7 @@ The Remote - Containers extension lets you run Visual Studio Code inside a Docke
 ![Remote Development Extension](images/RemoteDevelopmentExtension.png)
 
 Upon successful installation, you will see a new Status bar item at the far left.
+
 ![Check installation](images/CheckInstallation.png)
 
 > **Information**
