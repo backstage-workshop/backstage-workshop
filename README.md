@@ -38,7 +38,7 @@ ln -sfn $(brew --prefix)/opt/docker-compose/bin/docker-compose ~/.docker/cli-plu
 
 The Remote - Containers extension lets you run Visual Studio Code inside a Docker container.
 
-> [Install the Remote - Development extension](vscode:extension/ms-vscode-remote.vscode-remote-extensionpack)
+[Install the Remote - Development extension](vscode:extension/ms-vscode-remote.vscode-remote-extensionpack)
 
 ![Remote Development Extension](images/RemoteDevelopmentExtension.png)
 
@@ -57,6 +57,7 @@ Run following commands from terminal to start the colima.
 colima start --cpu 2 --memory 4
 ```
 >**Note**
+>
 >This may take few minutes for the first run.
 
 ## 2. Open VS Code in Container
@@ -68,9 +69,11 @@ Upon successful container creation, you should see the workspace opened in the V
 ![Open in Container Success](images/OpenInContainerSuccess.png)
 
 >**Note**
+>
 >This may take few minutes for the first run to build the container.
 
 >**Information**
+>
 >Workspace folder is on container local volume.
 >The repository on the host machine is mapped to `/my-machine`.
 
@@ -78,6 +81,7 @@ Upon successful container creation, you should see the workspace opened in the V
 1. Open command pallate and select `Remote: Close Remote Connection`. 
 ![Close Remote Connection](images/CloseRemoteConnection.png)
 >**Note**
+>
 >You should push your code before closing the container as the workspace is local volume (not mapped on the host machine).
 
 2. Stop colima by running following command from terminal.
