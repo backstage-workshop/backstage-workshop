@@ -1,0 +1,13 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: counter-db
+  description: Counter service database
+  tags:
+    - mongodb
+    - database
+spec:
+  type: database
+  lifecycle: experimental
+  owner: group:guests
+  system: counter-app

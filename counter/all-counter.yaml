@@ -1,0 +1,12 @@
+apiVersion: backstage.io/v1alpha1
+kind: Location
+metadata:
+  name: all-counter
+  description: A collection of all Backstage example entities, except users, groups, and templates
+spec:
+  targets:
+    - ./counter-app/catalog-info.yaml
+    - ./counter-app/service/catalog-info.yaml
+    - ./counter-app/service/api/catalog-info.yaml
+    - ./counter-app/service/lib/catalog-info.yaml
+    - ./counter-app/service/db/catalog-info.yaml

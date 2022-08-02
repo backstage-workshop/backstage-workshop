@@ -1,0 +1,217 @@
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: counter-api
+  description: API for counter-service
+  links:
+   - url: http://localhost:8080/swagger-ui.html
+     title: Swagger UI
+  tags:
+    - http
+spec:
+  type: openapi
+  lifecycle: production
+  owner: group:guests
+  system: counter-app
+  definition: |
+    openapi: 3.0.1
+    info:
+      title: OpenAPI definition
+      version: v0
+    servers:
+      - url: http://localhost:8080
+        description: Generated server url
+    paths:
+      /api/v1/counters/{id}/name:
+        put:
+          tags:
+            - counting-api
+          operationId: updateName
+          parameters:
+            - name: id
+              in: path
+              required: true
+              schema:
+                type: string
+          requestBody:
+            content:
+              application/json:
+                schema:
+                  type: string
+            required: true
+          responses:
+            "200":
+              description: OK
+              content:
+                '*/*':
+                  schema:
+                    $ref: '#/components/schemas/Counter'
+      /api/v1/counters/{id}/count:
+        put:
+          tags:
+            - counting-api
+          operationId: updateCount
+          parameters:
+            - name: id
+              in: path
+              required: true
+              schema:
+                type: string
+          requestBody:
+            content:
+              application/json:
+                schema:
+                  type: integer
+                  format: int32
+            required: true
+          responses:
+            "200":
+              description: OK
+              content:
+                '*/*':
+                  schema:
+                    $ref: '#/components/schemas/Counter'
+      /api/v1/counters:
+        get:
+          tags:
+            - counting-api
+          operationId: list
+          parameters:
+            - name: name
+              in: query
+              required: false
+              schema:
+                type: string
+            - name: count
+              in: query
+              required: false
+              schema:
+                type: integer
+                format: int32
+            - name: pageable
+              in: query
+              required: true
+              schema:
+                $ref: '#/components/schemas/Pageable'
+          responses:
+            "200":
+              description: OK
+              content:
+                '*/*':
+                  schema:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/Counter'
+        post:
+          tags:
+            - counting-api
+          operationId: create
+          requestBody:
+            content:
+              application/json:
+                schema:
+                  $ref: '#/components/schemas/CounterRequest'
+            required: true
+          responses:
+            "200":
+              description: OK
+              content:
+                '*/*':
+                  schema:
+                    $ref: '#/components/schemas/Counter'
+      /api/v1/counters/{id}/increment:
+        post:
+          tags:
+            - counting-api
+          operationId: increment
+          parameters:
+            - name: id
+              in: path
+              required: true
+              schema:
+                type: string
+          responses:
+            "200":
+              description: OK
+              content:
+                '*/*':
+                  schema:
+                    $ref: '#/components/schemas/Counter'
+      /api/v1/counters/{id}/decrement:
+        post:
+          tags:
+            - counting-api
+          operationId: decrement
+          parameters:
+            - name: id
+              in: path
+              required: true
+              schema:
+                type: string
+          responses:
+            "200":
+              description: OK
+              content:
+                '*/*':
+                  schema:
+                    $ref: '#/components/schemas/Counter'
+      /api/v1/counters/{id}:
+        get:
+          tags:
+            - counting-api
+          operationId: get
+          parameters:
+            - name: id
+              in: path
+              required: true
+              schema:
+                type: string
+          responses:
+            "200":
+              description: OK
+              content:
+                '*/*':
+                  schema:
+                    $ref: '#/components/schemas/Counter'
+    components:
+      schemas:
+        Counter:
+          required:
+            - count
+            - id
+            - name
+          type: object
+          properties:
+            name:
+              type: string
+            count:
+              type: integer
+              format: int32
+            id:
+              type: string
+        CounterRequest:
+          required:
+            - count
+            - name
+          type: object
+          properties:
+            name:
+              type: string
+            count:
+              type: integer
+              format: int32
+        Pageable:
+          type: object
+          properties:
+            page:
+              minimum: 0
+              type: integer
+              format: int32
+            size:
+              minimum: 1
+              type: integer
+              format: int32
+            sort:
+              type: array
+              items:
+                type: string
