@@ -4,8 +4,8 @@ services:
   app:
     image: backstage:latest
     environment:
-      POSTGRES_HOST: db
-      POSTGRES_PORT: 5432
+      POSTGRES_SERVICE_HOST: db
+      POSTGRES_SERVICE_PORT: 5432
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres
     ports:
