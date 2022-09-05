@@ -8,5 +8,5 @@ spec:
     - ./counter-app/catalog-info.yaml
     - ./counter-app/service/catalog-info.yaml
     - ./counter-app/service/api/catalog-info.yaml
-    - ./counter-app/service/lib/catalog-info.yaml
+    - ./counter-app/service/library/catalog-info.yaml
     - ./counter-app/service/db/catalog-info.yaml
