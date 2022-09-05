@@ -34,6 +34,11 @@ ln -sfn $(brew --prefix)/opt/docker-compose/bin/docker-compose ~/.docker/cli-plu
 >
 > We are using Colima version: 0.4.4 for this workshop.
 
+> **Note**
+>
+> Instead of Colima, you can also use minikube as an replacement for docker desktop. Refer to this [article](https://minikube.sigs.k8s.io/docs/tutorials/docker_desktop_replacement/) for more information.
+
+
 ## 3. Install Remote-Containers extension for Visual Studio Code.
 
 The Remote - Containers extension lets you run Visual Studio Code inside a Docker container.
@@ -89,3 +94,11 @@ Upon successful container creation, you should see the workspace opened in the V
 ```sh
 colima stop
 ``` 
+
+# Workshop requirements
+
+In addition to setup described above, during the workshop you would need to free up following ports as they are required by the Backstage applications to run.
+- 3000
+- 7007
+- 8080
+
