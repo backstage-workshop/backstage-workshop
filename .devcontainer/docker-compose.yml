@@ -26,6 +26,11 @@ services:
 
     # Use "forwardPorts" in **devcontainer.json** to forward an app port locally. 
     # (Adding the "ports" property to this file will not forward from a Codespace.)
+    environment:
+      POSTGRES_SERVICE_HOST: db
+      POSTGRES_SERVICE_PORT: 5432
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
 
   db:
     image: postgres:latest
