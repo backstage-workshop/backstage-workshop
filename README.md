@@ -2,6 +2,18 @@
 
 This repository helps candidates with initial setup of the development environment. Additionally, it provides some example entities, code samples that will be used in the workshop.
 
+**Description of resources:**
+| Directory | Description |
+|-|-|
+| .devcontainer | Configuration for development environment we use for the workshop.|
+| backstage-local-dev | Sample docker environment for deploying backstage application in docker. |
+| counter | Sample catalog model of a project. |
+| images | Images used in this README. |
+| k8s | Sample kubernetes object definitions for deploying backstage in kubernetes. |
+| springboot-kotlin-service | A standard spring boot kotlin project that will be used in the workshop for preparing a backstage template. |
+| tw-logo | Thoughtworks logos that we will be adding to our backstage app during the workshop |
+| users | Sample catalog model of an organization. |
+
 # Laptop Setup
 
 ## 1. Install Visual Studio Code
@@ -60,7 +72,7 @@ Upon successful installation, you will see a new Status bar item at the far left
 ## 1. Start Docker Desktop
 Run following commands from terminal to start the colima.
 ```sh
-colima start --cpu 2 --memory 4
+colima start --cpu 4 --memory 8
 ```
 >**Note**
 >
@@ -101,4 +113,6 @@ In addition to setup described above, during the workshop you would need to free
 - 3000
 - 7007
 - 8080
+
+You will also need a GitHub account.
 
