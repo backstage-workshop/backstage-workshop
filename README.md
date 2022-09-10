@@ -16,6 +16,11 @@ This repository helps candidates with initial setup of the development environme
 
 # Laptop Setup
 
+> **Note**
+> We will be using a [Dev container](https://code.visualstudio.com/docs/remote/containers) in this workshop.
+>
+> The only motivation behind this is to provide a standard development evironment with all tools and utilities pre-installed. This provides an ephemeral  environment for development during the workshop. Hence, the setup for workshop will not interfere with candidates local development environment.
+
 ## 1. Install Visual Studio Code
 Use [link](https://code.visualstudio.com/download) to download the installer for Visual Studio Code.
 
@@ -94,6 +99,8 @@ Upon successful container creation, you should see the workspace opened in the V
 >
 >Workspace folder is on container local volume.
 >The repository on the host machine is mapped to `/my-machine`.
+>
+>Colima by default mounts the $HOME directory of the user on the container. In order to use the mapping mentioned above, clone this repository anywhere under your $HOME directory. `/my-machine` will not be accessible if this project is cloned outside $HOME.
 
 ## 3. Close Container
 1. Open command pallate and select `Remote: Close Remote Connection`. 
@@ -109,10 +116,13 @@ colima stop
 
 # Workshop requirements
 
-In addition to setup described above, during the workshop you would need to free up following ports as they are required by the Backstage applications to run.
-- 3000
-- 7007
-- 8080
+In addition to setup described above
+- You will need a GitHub account.
+- During the workshop you would need to free up following ports as they are required by the Backstage applications to run.
+  - 3000
+  - 7000
+  - 8080   
 
-You will also need a GitHub account.
-
+### Optional (things to learn before the workshop):
+- You can learn the [YAML](https://yaml.org/) file syntax as it will come handy while changing the entities and backstage configuration.
+- Since, backstage is written using [React](https://reactjs.org/), [Node](https://nodejs.org/en/) and, [Typescript](https://www.typescriptlang.org/), some basic knowledge of these would be helpful.
