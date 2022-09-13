@@ -3,10 +3,25 @@
 This repository helps candidates with initial setup of the development environment. Additionally, it provides some example entities, code samples that will be used in the workshop.
 
 **Contents**
+- **[Workshop requirements](#workshop-requirements)**
 - **[Laptop setup](#laptop-setup)**
 - **[Opening workspace in the dev-container](#opening-workspace-in-the-dev-container)**
-- **[Workshop requirements](#workshop-requirements)**
 - **[Description of resources](#description-of-resources)**
+
+---
+
+## Workshop requirements
+
+In addition to the [laptop setup](#laptop-setup)
+- You will need a GitHub account.
+- During the workshop you would need to free up following ports as they are required by the Backstage applications to run.
+  - 3000
+  - 7000
+  - 8080   
+
+### Optional (things to learn before the workshop):
+- You can learn the [YAML](https://yaml.org/) file syntax as it will come handy while changing the entities and backstage configuration.
+- Since, backstage is written using [React](https://reactjs.org/), [Node](https://nodejs.org/en/) and, [Typescript](https://www.typescriptlang.org/), some basic knowledge of these would be helpful.
 
 ---
 
@@ -111,21 +126,6 @@ Upon successful container creation, you should see the workspace opened in the V
 ```sh
 colima stop
 ``` 
-
----
-
-## Workshop requirements
-
-In addition to setup described above
-- You will need a GitHub account.
-- During the workshop you would need to free up following ports as they are required by the Backstage applications to run.
-  - 3000
-  - 7000
-  - 8080   
-
-### Optional (things to learn before the workshop):
-- You can learn the [YAML](https://yaml.org/) file syntax as it will come handy while changing the entities and backstage configuration.
-- Since, backstage is written using [React](https://reactjs.org/), [Node](https://nodejs.org/en/) and, [Typescript](https://www.typescriptlang.org/), some basic knowledge of these would be helpful.
 
 ---
 
