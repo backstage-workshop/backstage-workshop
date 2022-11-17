@@ -140,3 +140,4 @@ colima stop
 | springboot-kotlin-service | A standard spring boot kotlin project that will be used in the workshop for preparing a backstage template. |
 | tw-logo | Thoughtworks logos that we will be adding to our backstage app during the workshop |
 | users | Sample catalog model of an organization. |
+| code-snippets | Code snippets for copy-pasting. |
