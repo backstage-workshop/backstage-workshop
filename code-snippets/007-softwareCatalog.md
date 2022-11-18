@@ -55,7 +55,7 @@ auth:
   providers: 
     github:
       development:
-        cliendId: <cliendId>
+        clientId: <cliendId>
         clientSecret: <clientSecret>
 ```
 
