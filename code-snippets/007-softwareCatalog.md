@@ -45,7 +45,7 @@ Add following entry to  app-config.yaml to configure location
 
 - Register new OAuth 
 Put Homepage URL as http://localhost:3000
-Put Authorization callback URL http://localhost:7007/api/auth/github
+Put Authorization callback URL http://localhost:7007/api/auth/github/handler/frame
 
 Put it in app-config-local.yaml
 
