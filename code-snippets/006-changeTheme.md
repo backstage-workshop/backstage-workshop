@@ -1,15 +1,13 @@
 - Create a new theme configuration.
   - Add file twTheme in packages/app/src/themes
-  - copy content from backstage-workshop/themes/twTheme
-  - Copy two images 
-    - cp -r /my-machine/tw-logo/. packages/app/src/themes
-
+    ```shell
+      cp -r /my-machine/themes packages/app/src/themes
+```
 - yarn add --cwd packages/app @material-ui/lab
+````
 - Add imports in App.tsx
 ```typescript
 import { twTheme } from './themes/twTheme';
-import { twThemeDark } from './themes/twThemeDark';
-
 import { ThemeProvider } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import LightIcon from '@material-ui/icons/WbSunny';
@@ -34,9 +32,19 @@ themes: [{
 ```
 yarn add --cwd packages/app @backstage/plugin-home
 ```
+- create new file HomePage.tsx under app/src/component/home
+- Add conetnt in Homepage.tsx
+```typescript
+import React from 'react';
+
+export const HomePage = () => {
+  /* We will shortly compose a pretty homepage here. */
+  return <h1>Welcome to Backstage!</h1>;
+};
+```
 - import following in App.tsx
 ```shell
-import { HomePage } from "../src/components/home/HomePage";
+import { HomePage } from './components/home/HomePage';
 import { HomepageCompositionRoot } from '@backstage/plugin-home';
 ```
 
