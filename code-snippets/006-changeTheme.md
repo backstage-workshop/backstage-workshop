@@ -57,7 +57,6 @@ import { HomepageCompositionRoot } from '@backstage/plugin-home';
     </Route>
 ```
 ---
-
 - Update sidebar by doing changes in Root.tsx
 - Add import
 ```shell
