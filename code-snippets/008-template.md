@@ -24,7 +24,7 @@ rm ./content/*.js*
   rules:
     - allow: [Template]
 ```
-
+---
 ### Add description in readme
 - Add description as parameter
   - add below text in parameter list in template.yaml
@@ -50,6 +50,7 @@ ${{ values.name }}
 ${{ values.description }}
 
 ```
+---
 ### Add owner component in template form
 - add below text in parameter list in template.yaml
 ```shell
@@ -70,14 +71,22 @@ owner:
     ```
 - Update value in catalog-info.yaml to use owner 
 
-
+---
 ### Class work: add java version, group and artifactID
   - Copy build.gradle and settings.gradle files from accelerator to content.
   - Add gradle wrapper to project
-  - Copy “gradle” directory to content
-  - Copy gradlew scripts to content.
-  - 
-
+    - Copy “gradle” directory to content
+    - Copy gradlew scripts to content.
+  - Capture Gradle configuration on separate wizard step
+    - Capture Artifact Id (string, required)
+    - Capture Java Package (string, required)
+    - Capture Version (string, optional, default: 0.0.1-SNAPSHOT)
+  - Add template for build.gradle.kts
+    - Use Java Package value captured from user in “group”.
+    - Use Version value captured from user in “version”
+  - Add template for settings.gradle.kts
+    - Use artifactId value captured from user in “rootProject.name”
+---
 ### github Actions
 - register the existing project which already have github workflow defined
 - https://github.com/backstage-workshop/springboot-accelerator
