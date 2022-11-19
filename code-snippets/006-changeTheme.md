@@ -2,8 +2,9 @@
   - Copy files from twTheme in packages/app/src/themes
 ```shell
 cp -r /my-machine/themes packages/app/src/themes
-```
 ---
+
+```
 - yarn add --cwd packages/app @material-ui/lab
 ````
 - Add imports in App.tsx
