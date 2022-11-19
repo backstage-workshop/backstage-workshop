@@ -1,8 +1,9 @@
 - Create a new theme configuration.
-  - Add file twTheme in packages/app/src/themes
-    ```shell
-      cp -r /my-machine/themes packages/app/src/themes
+  - Copy files from twTheme in packages/app/src/themes
+```shell
+cp -r /my-machine/themes packages/app/src/themes
 ```
+---
 - yarn add --cwd packages/app @material-ui/lab
 ````
 - Add imports in App.tsx
@@ -27,8 +28,8 @@ themes: [{
     ),
   }],
 ```
-
-#Add homepage
+---
+- Add homepage
 ```
 yarn add --cwd packages/app @backstage/plugin-home
 ```
@@ -55,7 +56,7 @@ import { HomepageCompositionRoot } from '@backstage/plugin-home';
       <HomePage />
     </Route>
 ```
-
+---
 
 - Update sidebar by doing changes in Root.tsx
 - Add import
