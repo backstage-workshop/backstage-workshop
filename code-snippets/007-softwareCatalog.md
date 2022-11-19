@@ -18,10 +18,8 @@ git commit -am "Add counter entities"
 git remote add origin <Your Git Repo Path>
 git push -u origin master
 ```
-
-Register entities by giving full URL for all-counter.yaml
-
-
+- Register entities by giving full URL for all-counter.yaml
+---
 - Register User and Group
 
 ```shell
@@ -42,10 +40,11 @@ Add following entry to  app-config.yaml to configure location
         - allow: [User, Group]
 ```
 
-
+---
+### Auth provider
 - Register new OAuth 
 Put Homepage URL as http://localhost:3000
-Put Authorization callback URL http://localhost:7007/api/auth/github/handler/frame
+Put Authorization callback URL http://localhost:7007/api/auth/github
 
 Put it in app-config-local.yaml
 
