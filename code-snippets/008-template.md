@@ -20,7 +20,7 @@ rm ./content/*.js*
 
 ```shell
 - type: file
-  target: ../../../backstage-templates/template/template.yaml
+  target: ../../../backstage-templates/springboot-kotlin/template.yaml
   rules:
     - allow: [Template]
 ```
@@ -79,15 +79,16 @@ owner:
   - 
 
 ### github Actions
-    - register the existing project which already have github workflow defined
-      - https://github.com/backstage-workshop/springboot-accelerator
-      - using templates
-        - Add annotations under metadata tag in catalog-info.yaml
-        ```shell
-          annotations:
+- register the existing project which already have github workflow defined
+- https://github.com/backstage-workshop/springboot-accelerator
+- using templates
+- Add annotations under metadata tag in catalog-info.yaml
+```shell
+    annotations:
             github.com/project-slug: ${{values.destination.owner + "/" + values.destination.repo}}
-        ```
-        - Add following line in template.yaml in values of fetch base step
+```
+      
+- Add following line in template.yaml in values of fetch base step
         ```shell
           destination: ${{ parameters.repoUrl | parseRepoUrl }}
         ```
