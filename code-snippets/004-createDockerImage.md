@@ -13,7 +13,7 @@ database:
 
 - Build the code. Run following commands. 
 ```
-yarn tsc && yarn build:all
+yarn tsc && yarn build:backend
 ```
 
 
