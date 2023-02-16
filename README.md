@@ -37,7 +37,7 @@ Use [link](https://code.visualstudio.com/download) to download the installer for
 
 > **Note**
 >
-> We are using Visual Studio Code Version: 1.69.2 (Universal) for this workshop.
+> We are using Visual Studio Code Version: 1.75.0 (Universal) for this workshop.
 
 ### 2. Install docker command line tools and Colima
 #### 2.1. Install Colima
@@ -60,7 +60,7 @@ ln -sfn $(brew --prefix)/opt/docker-compose/bin/docker-compose ~/.docker/cli-plu
 
 > **Note**
 >
-> We are using Colima version: 0.4.4 for this workshop.
+> We are using Colima version: 0.5.2 for this workshop.
 
 > **Note**
 >
