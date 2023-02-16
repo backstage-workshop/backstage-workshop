@@ -104,6 +104,19 @@ colima start --cpu 4 --memory 8
 Upon successful container creation, you should see the workspace opened in the VS code as shown in the image below.
 ![Open in Container Success](images/OpenInContainerSuccess.png)
 
+Click on the PORTS tab to see the ports exposed from the container.
+You should see the list of the ports as shown below.
+![DevContainer Ports](images/devcontainer-ports.png)
+
+Run following command from terminal to see the status of the devcontainers.
+```shell
+docker ps
+```
+
+You should see output similar to one shown below.
+![docker ps](images/devcontainer-docker-ps.png)
+
+
 >**Note**
 >
 >This may take few minutes for the first run to build the container.
