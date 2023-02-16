@@ -130,7 +130,7 @@ You should see output similar to one shown below.
 
 #### Now, you are all set for the workshop!
 You can close the container now by following step [3](#3.-close-container).
-On the workshop day, just open the dev container following steps [1](#1.-start-docker-desktop) & [2](#2.-open-vs-code-in-container).
+On the workshop day, just open the dev container by following steps [1](#1.-start-docker-desktop) & [2](#2.-open-vs-code-in-container).
 
 ### 3. Close Container
 1. Open command pallate and select `Remote: Close Remote Connection`. 
@@ -143,6 +143,12 @@ On the workshop day, just open the dev container following steps [1](#1.-start-d
 ```sh
 colima stop
 ``` 
+>**Note**
+>
+>After the workshop, delete the colima virtual machine by running following command.
+> ```shell
+> colima delete
+> ```
 
 ---
 
