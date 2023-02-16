@@ -128,6 +128,10 @@ You should see output similar to one shown below.
 >
 >Colima by default mounts the $HOME directory of the user on the container. In order to use the mapping mentioned above, clone this repository anywhere under your $HOME directory. `/my-machine` will not be accessible if this project is cloned outside $HOME.
 
+#### Now, you are all set for the workshop!
+You can close the container now by following step [3](#3.-close-container).
+On the workshop day, just open the dev container following steps [1](#1.-start-docker-desktop) & [2](#2.-open-vs-code-in-container).
+
 ### 3. Close Container
 1. Open command pallate and select `Remote: Close Remote Connection`. 
 ![Close Remote Connection](images/CloseRemoteConnection.png)
