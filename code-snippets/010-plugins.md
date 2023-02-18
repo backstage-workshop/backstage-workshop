@@ -113,7 +113,7 @@ Create the plugin backend
 
 Use plugin id: hello-backend
 ```sh
-yarn create-plugin --backend
+yarn new --select backend-plugin
 ```
 
 Implement backend api
