@@ -1,7 +1,7 @@
 To create a plugin, run following command from your backstage app directory.
 
 ```sh
-yarn create-plugin
+yarn new --select plugin
 ```
 ---
 
