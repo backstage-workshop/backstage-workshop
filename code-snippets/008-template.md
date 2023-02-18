@@ -26,6 +26,7 @@ rm ./content/*.js*
 ```
 
 - Change metadata
+
 Make following changes in template.yaml.
 ```
 metadata:
