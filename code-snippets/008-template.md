@@ -24,6 +24,16 @@ rm ./content/*.js*
   rules:
     - allow: [Template]
 ```
+
+- Change metadata
+Make following changes in template.yaml.
+```
+metadata:
+  name: springboot-kotlin
+  title: SpringBoot Kotlin service
+  description: A standard SpringBoot based web service implemented in Kotlin.
+```
+- Restart Backstage.
 ---
 ### Add description in readme
 - Add description as parameter
