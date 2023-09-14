@@ -104,6 +104,12 @@ export const ExampleComponent = () => {
 Start the backend service
 
 Copy springboot sample service to your workspace
+
+```sh
+cp -r /my-machine/springboot-kotlin-service .
+```
+
+
 ```sh
 sudo -E ./gradlew bootRun
 ```
