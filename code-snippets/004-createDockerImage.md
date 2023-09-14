@@ -10,6 +10,7 @@ database:
       password: ${POSTGRES_PASSWORD}
 ```
 
+Change node version to 18 in Dockerfile at /package/backend/DockerFile
 
 - Build the code. Run following commands. 
 ```
